@@ -2,35 +2,28 @@ package step.service.email;
 
 import step.model.Instructor;
 import step.model.Project;
-import step.service.EmailService;
 
 /**
  * @author Viktor Bilko on 03.09.2017.
  */
-public class InformationEmail implements Email {
+public class EmailCongratulatory implements Email {
 
-    public InformationEmail(Project project) {
+    public EmailCongratulatory(Project project){
         sendMessage(buildMessage(project), project.getInstructor().getEmail());
     }
 
     @Override
     public String buildMessage(Instructor instructor) {
         return "Instructor - " + instructor.getName()
-                + " "
-                + instructor.getSurname()
-                + "\n"
-                + "technology "
-                + instructor.getTechnology();
+                               + " "
+                               + instructor.getSurname()
+                               + "technology "
+                               + instructor.getTechnology();
     }
 
     @Override
     public String buildMessage(Project project) {
-        return "Project - " + project.getTechnology()
-                            + "\n"
-                            + "start: "
-                            + project.getStartDate()
-                            + "\n"
-                            + project.getPrice();
+        return "Congratulations to our" + buildMessage(project.getInstructor());
     }
 
     @Override
