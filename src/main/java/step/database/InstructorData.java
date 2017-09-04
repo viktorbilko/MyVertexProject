@@ -19,7 +19,7 @@ public class InstructorData {
         instructor.setTechnology("Java");
         instructor.setEmail("alex.smith@gmail.com");
 
-        return instructor;
+        return null;
     }
 
     public static List<Instructor> getInstructors(){

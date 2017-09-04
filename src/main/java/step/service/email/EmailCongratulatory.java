@@ -8,27 +8,25 @@ import step.model.Project;
  */
 public class EmailCongratulatory implements Email {
 
-    public EmailCongratulatory(Project project){
-        sendMessage(buildMessage(project), project.getInstructor().getEmail());
-    }
-
     @Override
     public String buildMessage(Instructor instructor) {
-        return "Instructor - " + instructor.getName()
-                               + " "
-                               + instructor.getSurname()
-                               + "technology "
-                               + instructor.getTechnology();
+            return "Instructor - " + instructor.getName()
+                    + " "
+                    + instructor.getSurname()
+                    + "\n"
+                    + "technology "
+                    + instructor.getTechnology();
     }
 
     @Override
     public String buildMessage(Project project) {
-        return "Congratulations to our" + buildMessage(project.getInstructor());
+        return "Congratulations to our " + "\n"
+                                         + buildMessage(project.getInstructor());
     }
 
     @Override
     public void sendMessage(String message, String email) {
-        System.out.println(message);
-        System.out.println(email);
+            System.out.println(message);
+            System.out.println(email);
     }
 }

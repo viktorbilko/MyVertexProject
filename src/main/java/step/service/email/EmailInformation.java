@@ -9,10 +9,6 @@ import step.service.EmailService;
  */
 public class EmailInformation implements Email {
 
-    public EmailInformation(Project project) {
-        sendMessage(buildMessage(project), project.getInstructor().getEmail());
-    }
-
     @Override
     public String buildMessage(Instructor instructor) {
         return "Instructor - " + instructor.getName()
