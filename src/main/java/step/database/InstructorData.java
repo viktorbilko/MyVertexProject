@@ -1,6 +1,7 @@
 package step.database;
 
 import lombok.NonNull;
+import lombok.val;
 import step.model.Instructor;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.List;
 public class InstructorData {
 
     public static Instructor getInstructor(){
-        Instructor instructor = Instructor.builder()
+        val instructor = Instructor.builder()
                 .name("Alex")
                 .surname("Smith")
                 .technology("Java")
@@ -25,28 +26,28 @@ public class InstructorData {
     }
 
     public static List<Instructor> getInstructors(){
-        Instructor alex = Instructor.builder()
+        val alex = Instructor.builder()
                 .name("Alex")
                 .surname("Smith")
                 .technology("Java")
                 .email("alex.smith@gmail.com")
                 .build();
 
-        Instructor bob = Instructor.builder()
+        val bob = Instructor.builder()
                 .name("Bob")
                 .surname("Smith")
                 .technology("Java")
                 .email("bob.smith@gmail.com")
                 .build();
 
-        Instructor tom = Instructor.builder()
+        val tom = Instructor.builder()
                 .name("Tom")
                 .surname("Smith")
                 .technology("Java")
                 .email("tom.smith@gmail.com")
                 .build();
 
-        List instructorsList = new ArrayList();
+        List<Instructor> instructorsList = new ArrayList();
         instructorsList.add(alex);
         instructorsList.add(bob);
         instructorsList.add(tom);

@@ -1,5 +1,6 @@
 package step.dao.impl;
 
+import lombok.val;
 import step.dao.ProjectDao;
 import step.database.ProjectData;
 import step.model.Project;
@@ -29,7 +30,7 @@ public class ProjectDaoImpl implements ProjectDao {
      * {@inheritDoc}
      */
     public Project getByID(Long id) {
-        Project project = Project.builder()
+        val project = Project.builder()
                 .technology("Java")
                 .price(500)
                 .build();

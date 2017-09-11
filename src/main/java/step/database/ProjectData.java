@@ -16,7 +16,7 @@ import java.util.List;
 public class ProjectData {
 
     public static List<Project> getProjets(){
-        Project javaStart = Project.builder()
+        val javaStart = Project.builder()
                 .technology("Java Start")
                 .startDate("01.09.2017")
                 .price(500)
@@ -24,7 +24,7 @@ public class ProjectData {
                 .build();
         javaStart.setId(1);
 
-        Project javaOOP = Project.builder()
+        val javaOOP = Project.builder()
                 .technology("Java OOP")
                 .startDate("02.09.2017")
                 .price(1000)
@@ -32,7 +32,7 @@ public class ProjectData {
                 .build();
         javaOOP.setId(2);
 
-        Project javaProfessional = Project.builder()
+        val javaProfessional = Project.builder()
                 .technology("Java Professional")
                 .startDate("03.09.2017")
                 .price(1500)
