@@ -5,7 +5,6 @@ import step.service.EmailService;
 import step.service.ProjectService;
 import step.service.email.Email;
 import step.service.email.EmailType;
-import step.service.email.impl.EmailServiceImpl;
 import step.service.factory.ServiceFactory;
 
 import java.util.List;
