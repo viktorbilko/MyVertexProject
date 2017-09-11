@@ -29,9 +29,10 @@ public class ProjectDaoImpl implements ProjectDao {
      * {@inheritDoc}
      */
     public Project getByID(Long id) {
-        Project project = new Project();
-        project.setTechnology("Java");
-        project.setPrice(500);
+        Project project = Project.builder()
+                .technology("Java")
+                .price(500)
+                .build();
         return project;
     }
 
