@@ -5,6 +5,6 @@ package step.service.email;
  */
 public enum EmailType {
 
-    INFORMATIONMAIL,
-    CONGRATULATORYLETTER
+    INFORMATION_LETTER,
+    CONGRATULATORY_LETTER
 }

@@ -5,7 +5,6 @@ import step.service.EmailService;
 import step.service.ProjectService;
 import step.service.email.Email;
 import step.service.email.EmailType;
-import step.service.email.impl.EmailServiceImpl;
 import step.service.factory.ServiceFactory;
 
 import java.util.List;
@@ -24,7 +23,7 @@ public class ProjectController {
         }
 
         EmailService emailService = ServiceFactory.getEmailService();
-        Email emailType = emailService.getEmailType(EmailType.CONGRATULATORYLETTER);
+        Email emailType = emailService.getEmailType(EmailType.CONGRATULATORY_LETTER);
         emailService.send(projects.get(0), emailType);
     }
 }

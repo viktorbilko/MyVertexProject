@@ -1,10 +1,9 @@
 package step.service.factory;
 
-import step.model.Project;
 import step.service.EmailService;
 import step.service.InstructorServise;
 import step.service.ProjectService;
-import step.service.email.impl.EmailServiceImpl;
+import step.service.impl.EmailServiceImpl;
 import step.service.impl.InstructorServiceImpl;
 import step.service.impl.ProjectServiceImpl;
 

@@ -1,4 +1,4 @@
-package step.service.email.impl;
+package step.service.impl;
 
 import step.model.Instructor;
 import step.model.Project;
@@ -21,10 +21,10 @@ public class EmailServiceImpl implements EmailService {
     @Override
     public Email getEmailType(EmailType emailType) {
         switch (emailType) {
-            case INFORMATIONMAIL:
+            case INFORMATION_LETTER:
                 new EmailInformation();
                 break;
-            case CONGRATULATORYLETTER:
+            case CONGRATULATORY_LETTER:
                 new EmailCongratulatory();
                 break;
             default:
@@ -59,8 +59,8 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    public void check(String message) throws NoEmptyException {
-        if ("".equals(message)) {
+    public void check(String string) throws NoEmptyException {
+        if ("".equals(string)) {
             throw new NoEmptyException();
         }
     }
