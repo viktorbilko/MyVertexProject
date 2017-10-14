@@ -1,5 +1,7 @@
 package step.database;
 
+import lombok.NonNull;
+import lombok.val;
 import step.model.Instructor;
 
 import java.util.ArrayList;
@@ -13,35 +15,39 @@ import java.util.List;
 public class InstructorData {
 
     public static Instructor getInstructor(){
-        Instructor instructor = new Instructor();
-        instructor.setName("Alex");
-        instructor.setSurname("Smith");
-        instructor.setTechnology("Java");
-        instructor.setEmail("alex.smith@gmail.com");
+        val instructor = Instructor.builder()
+                .name("Alex")
+                .surname("Smith")
+                .technology("Java")
+                .email("alex.smith@gmail.com")
+                .build();
 
-        return null;
+        return instructor;
     }
 
     public static List<Instructor> getInstructors(){
-        Instructor alex = new Instructor();
-        alex.setName("Alex");
-        alex.setSurname("Smith");
-        alex.setTechnology("Java");
-        alex.setEmail("alex.smith@gmail.com");
+        val alex = Instructor.builder()
+                .name("Alex")
+                .surname("Smith")
+                .technology("Java")
+                .email("alex.smith@gmail.com")
+                .build();
 
-        Instructor bob = new Instructor();
-        bob.setName("Bob");
-        bob.setSurname("Smith");
-        bob.setTechnology("Java");
-        bob.setEmail("bob.smith@gmail.com");
+        val bob = Instructor.builder()
+                .name("Bob")
+                .surname("Smith")
+                .technology("Java")
+                .email("bob.smith@gmail.com")
+                .build();
 
-        Instructor tom = new Instructor();
-        tom.setName("Tom");
-        tom.setSurname("Smith");
-        tom.setTechnology("Java");
-        tom.setEmail("tom.smith@gmail.com");
+        val tom = Instructor.builder()
+                .name("Tom")
+                .surname("Smith")
+                .technology("Java")
+                .email("tom.smith@gmail.com")
+                .build();
 
-        List instructorsList = new ArrayList();
+        List<Instructor> instructorsList = new ArrayList();
         instructorsList.add(alex);
         instructorsList.add(bob);
         instructorsList.add(tom);

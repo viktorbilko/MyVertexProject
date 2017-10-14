@@ -1,5 +1,6 @@
 package step.database;
 
+import lombok.val;
 import step.model.Instructor;
 import step.model.Project;
 
@@ -11,29 +12,33 @@ import java.util.List;
  *
  * @author Viktor Bilko on 28.08.2017.
  */
+
 public class ProjectData {
 
     public static List<Project> getProjets(){
-        Project javaStart = new Project();
+        val javaStart = Project.builder()
+                .technology("Java Start")
+                .startDate("01.09.2017")
+                .price(500)
+                .instructor(InstructorData.getInstructor())
+                .build();
         javaStart.setId(1);
-        javaStart.setTechnology("Java Start");
-        javaStart.setStartDate("01.09.2017");
-        javaStart.setPrice(500);
-        javaStart.setInstructor(InstructorData.getInstructor());
 
-        Project javaOOP = new Project();
+        val javaOOP = Project.builder()
+                .technology("Java OOP")
+                .startDate("02.09.2017")
+                .price(1000)
+                .instructor(InstructorData.getInstructor())
+                .build();
         javaOOP.setId(2);
-        javaOOP.setTechnology("Java OOP");
-        javaOOP.setStartDate("02.09.2017");
-        javaOOP.setPrice(1000);
-        javaOOP.setInstructor(InstructorData.getInstructor());
 
-        Project javaProfessional = new Project();
-        javaProfessional.setId(2);
-        javaProfessional.setTechnology("Java Professional");
-        javaProfessional.setStartDate("03.09.2017");
-        javaProfessional.setPrice(1500);
-        javaProfessional.setInstructor(InstructorData.getInstructor());
+        val javaProfessional = Project.builder()
+                .technology("Java Professional")
+                .startDate("03.09.2017")
+                .price(1500)
+                .instructor(InstructorData.getInstructor())
+                .build();
+        javaProfessional.setId(3);
 
         List<Project> projectsList = new ArrayList<>();
         projectsList.add(javaStart);

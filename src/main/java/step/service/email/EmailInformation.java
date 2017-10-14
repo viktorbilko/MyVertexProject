@@ -1,5 +1,6 @@
 package step.service.email;
 
+import lombok.NonNull;
 import step.model.Instructor;
 import step.model.Project;
 import step.service.EmailService;
@@ -10,7 +11,7 @@ import step.service.EmailService;
 public class EmailInformation implements Email {
 
     @Override
-    public String buildMessage(Instructor instructor) {
+    public String buildMessage(@NonNull Instructor instructor) {
         return "Instructor - " + instructor.getName()
                 + " "
                 + instructor.getSurname()
