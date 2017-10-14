@@ -14,7 +14,6 @@ import step.service.email.exception.NoEmptyException;
  * @author Viktor Bilko on 29.08.2017.
  */
 public class EmailServiceImpl implements EmailService {
-
     /**
      * {@inheritDoc}.
      */
